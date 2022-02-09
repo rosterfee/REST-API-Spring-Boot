@@ -1,55 +1,35 @@
-Документация по проекту.
+# Project information:
+The project is a Web Api implemented using the REST specification
 
-Стек технологий:
+## Technologies stack:
 
-Frontend:
-    -HTML / JS / CSS
-    -Bootstrap
-    -JQuery
+- Spring Boot 2.6.3
+- PostgreSQL
+- Hibernate ORM
+- Swagger
+- Docker
+    
+## Used design pattern:
 
-Backend:
-    -Java Servlets
-    -Freemarker
-    -PostgreSQL
-Концепция разработки: MVC
+- MVC
+- Multi-module application
 
-Патерн проектирования: Repository
+## Database connection technology
 
-Технология связи с базой данных: ORM
+- ORM
 
-Функционал сайта:
+## Web API abilities:
+- create, delete, view and edit information about projects
+- create tasks in the project, delete them, view and edit information about tasks 
+- view all tasks in the project
 
-Создание профили или авторизация пользователя.
-Профиль пользователя будет доступен только авторизированным пользователям. Профиль будет содержать контактную информацию(номер телефона, почта, соц. сети) с разрешения пользователя будет осуществляться рассылка на доступные авто или акции кроме телефонного номера,предпочтения по автомобилям, история заказов с возможностью сделать заказ ещё раз, лицензия на вождение.
-Вывод автомобилей с фильтрами(цена, город проката, количество л.с., в наличии или нет, марка авто, коробка передач мех. или авто.) и без.
-При заказе авто, есть возможность выбора использования данных из профиля или вручную введенные.
-Есть проверка на стаж вождения от 3-х лет.
-Открытые отзывы. Возможность оставить отзыв есть только у авторизованных и совершивших от одного заказа пользователей.
-Существует корзина заказов с выводом цены с учетом скидок.
-Задачи по разработке приложения:
+## Purpose of using this Web API: 
+- Entering the project data into the database
+- Getting the project data from database
 
-Автозаполнение для завершении заказа по данным из профиля пользователя.
-Данные из профиля проходят проверку через регулярные выражения.(Водительская лицензия проверяется модератором через сайт гибдд с промежутком времени в зависимости от штата сотрудников.)
-Использование сессии для авторизации пользователей.
-Использование cookie файлов для хранения корзины заказов, запоминание логина и пароля для следующих авторизаций профиля.
-Ajax запросы: для проверки уже существуещего email при регистрации, правильность заполненных данных на этапе авторизации.
-Хэширование паролей.
-Страницы:
-
-Главная страница.
-Каталог авто.
-Профиль.
-Форма регистрации.
-Форма авторизации.
-Отзывы.
-Страница обработки и оплаты заказа.
-Корзина.
-Страница о компании.
-Тарифы.
-Бизнес требования:
-
-Цель: Создать удобное и простое для пользователя приложение для сдачи в аренду авто для компании с филиалами в нескольких городах.
-
-Проблема: Отсутстивие онлайн заказа аренды авто в городе.
-
-Решение: удобное приложение с широким выбором авто.
+## How to use Web API:
+1) Docker must be installed on your computer. You can download Docker on the [official website of the developer](https://www.docker.com/get-started)
+2) Clone this repository into your machine
+3) Input ***docker-compose up*** command in the project root
+4) You can view the API in a browser at the following URL: http://localhost:8080/swagger-ui/
+5) You are ready to use Web API
